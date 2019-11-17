@@ -1,0 +1,17 @@
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+
+  .avatar {
+    background-color: blue;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  .text-block {
+    max-width: 80%;
+  }
+}

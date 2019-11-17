@@ -5,7 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid rgb(216, 216, 216);
-  padding: 0 0 10px 0;
+  padding: 0 0 10px 15px;
 
   .title-block {
     .title {
@@ -18,7 +18,7 @@
       padding: 3px 5px 3px 5px;
       margin-left: 10px;
       border-radius: 10px;
-      background-color: rgb(78, 240, 186);
+      background-color: rgb(108, 175, 153);
     }
   }
   .delete-button {
@@ -31,4 +31,8 @@
     }
   }
   
+}
+
+.active {
+  border-left: 3px solid rgb(235, 102, 102)
 }
