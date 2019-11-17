@@ -1,5 +1,4 @@
 import Types from "./types";
-import { arrowFunctionExpression } from "@babel/types";
 
 const initialState = {
   items: [],
