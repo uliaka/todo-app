@@ -1,0 +1,29 @@
+.add-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .add-area {
+    width: 70%;
+    border: 2px solid  rgb(216, 216, 216);
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  .add-button {
+    width: 30%;
+    text-align: center;
+    border-radius: 3px;
+    background-color:rgb(108, 175, 153);;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+}
+
+input::placeholder {
+  color:  rgb(192, 186, 186);;
+}
