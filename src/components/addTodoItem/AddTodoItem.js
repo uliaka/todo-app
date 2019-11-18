@@ -4,6 +4,13 @@ import PropTypes from 'prop-types';
 
 const AddTodoItem = (props) => {
   const [text, setText] = useState('');
+  const onAdd = (event) => {
+    event.preventDefault()
+    if (text) {
+      props.onAdd({ title: text });
+      setText('')
+    }
+  }
   return (
     <form className='add-container'>
       <input
@@ -12,7 +19,7 @@ const AddTodoItem = (props) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <div className="add-button" onClick={() => props.onAdd({ title: text })}>
+      <div className="add-button" onClick={onAdd}>
         <span>Add new</span>
       </div>
     </form>
