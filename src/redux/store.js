@@ -6,7 +6,17 @@ const initialState = {
     {
     id: 1,
     title: 'item one',
-    commentsCount: 56,
+    commentsCount: 2,
+    comments: [
+      {
+        id: 11,
+        text: "text 1",
+      },
+      {
+        id: 11,
+        text: "text 2",
+      }
+    ]
   },
   {
     id: 2,

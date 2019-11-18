@@ -7,8 +7,10 @@
   border-bottom: 1px solid rgb(216, 216, 216);
   padding: 0 0 20px 15px;
   margin-top: 30px;
+  cursor: pointer;
 
   .title-block {
+
     .title {
       display: inline;
       font-weight: bold;
@@ -16,24 +18,24 @@
     .commetns-count {
       display: inline;
       color: white;
-      padding: 3px 5px 3px 5px;
+      padding: 1px 9px 1px 9px;
       margin-left: 10px;
       border-radius: 10px;
-      background-color: rgb(108, 175, 153);
+      background-color: #2DC9BE;
     }
   }
   .delete-button {
     text-align: center;
     span {
-      border: 1px solid rgb(212, 98, 98);
+      border: 1px solid #DB5A76;
       border-radius: 3px;
       padding: 5px 20px;
-      color: rgb(212, 98, 98);
+      color: #DB5A76
     }
   }
   
 }
 
 .active {
-  border-left: 3px solid rgb(235, 102, 102)
+  border-left: 3px solid #DB5A76;
 }
