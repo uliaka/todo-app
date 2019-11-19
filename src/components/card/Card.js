@@ -10,6 +10,7 @@ const Card = (props) => (
     <div className='card-body'>
       {props.body}
     </div>
+    <div style={{marginTop: '50px'}} ref={props.bottomRef}></div>
   </div>
 );
 
