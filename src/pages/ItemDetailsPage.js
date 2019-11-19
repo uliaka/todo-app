@@ -6,7 +6,7 @@ import Comment from '../components/comment/Comment.js';
 import AddComment from '../components/addComment/AddComment.js';
 import types from '../redux/types.js';
 
-function ItemDetailsPage(props) {
+const ItemDetailsPage = (props) =>{
   const itemId = parseInt(props.history.location.pathname.split('/').pop());
   const item = useSelector(state => state.items && state.items.find(i => i.id === itemId)) || {};
   const comments = item.comments || [];

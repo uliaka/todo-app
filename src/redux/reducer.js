@@ -9,7 +9,10 @@ const todoReducer = (state = initialState, action) => {
     case Types.ADD_ITEM: {
       return {
         ...state,
-        items: state.items.concat([action.payload])
+        items: state.items.concat([{
+          id: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+          ...action.payload
+        }])
       };
     }
     case Types.DELETE_ITEM: {
@@ -24,7 +27,7 @@ const todoReducer = (state = initialState, action) => {
         items: state.items.map(item => {
           return item.id === action.payload.itemId ? {
             ...item,
-            comments: item.comments.concat([{ text: action.payload.text }])
+            comments: (item.comments || []).concat([{ text: action.payload.text }])
           } : item;
         })
       };

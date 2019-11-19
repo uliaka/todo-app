@@ -7,12 +7,12 @@ const AddTodoItem = (props) => {
   const onAdd = (event) => {
     event.preventDefault()
     if (text) {
-      props.onAdd({ title: text });
+      props.onAdd({ title: text, id: 8 });
       setText('')
     }
   }
   return (
-    <form className='add-container'>
+    <div className='add-container'>
       <input
         placeholder='Type name here...'
         className='add-area'
@@ -22,7 +22,7 @@ const AddTodoItem = (props) => {
       <div className="add-button" onClick={onAdd}>
         <span>Add new</span>
       </div>
-    </form>
+    </div>
   )
 };
 

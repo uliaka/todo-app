@@ -5,7 +5,7 @@ import AddTodoItem from '../components/addTodoItem/AddTodoItem.js';
 import { useSelector, useDispatch } from 'react-redux';
 import Types from '../redux/types.js';
 
-function TodoItems(props) {
+const TodoItems = (props) => {
   const dispatch = useDispatch();
   let items = useSelector(state => state.items)
   const openItem = (item) => props.history.push(`/item/${item.id}`, { item });
