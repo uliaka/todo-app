@@ -10,7 +10,7 @@ export default {
 
 const props = {
   title: 'title',
-  body: <TodoItem title={"Title one"} commentsCount={132}/>
+  body: <TodoItem title={"Title one"} />
 }
 
 storiesOf('Card', module)

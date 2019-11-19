@@ -4,16 +4,18 @@ import TodoItem from '../components/todoItem/TodoItem.js';
 import AddTodoItem from '../components/addTodoItem/AddTodoItem.js';
 import { useSelector, useDispatch } from 'react-redux';
 import Types from '../redux/types.js';
+import ItemsDetails from './ItemDetailsPage.js'
 
-const TodoItems = (props) => {
+const TodoItems = () => {
   const dispatch = useDispatch();
   let items = useSelector(state => state.items)
-  const openItem = (item) => props.history.push(`/item/${item.id}`, { item });
+  const activeItem = useSelector(state => state.activeItem)
+  const openItem = (item) => dispatch({ type: Types.ACTIVE_ITEM, payload: item.id })
   const onDelete = (item) => dispatch({ type: Types.DELETE_ITEM, payload: item });
   const onAdd = (item) => dispatch({ type: Types.ADD_ITEM, payload: item });
 
   return (
-    <div className="todo-list" style={{ display: 'flex', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-around'}}>
       <Card
         title={'Items'}
         body={
@@ -24,7 +26,7 @@ const TodoItems = (props) => {
                 {...item}
                 key={item.id}
                 onOpen={() => openItem(item)}
-                onDelete={(e) => { 
+                onDelete={(e) => {
                   e.stopPropagation()
                   onDelete(item)
                 }}
@@ -33,6 +35,9 @@ const TodoItems = (props) => {
           </div>
         }
       />
+      { activeItem &&
+      <ItemsDetails />
+      }
     </div>
   );
 }

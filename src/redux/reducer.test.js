@@ -6,7 +6,6 @@ let state = {
     {
       id: 1,
       title: 'item one',
-      commentsCount: 56,
       comments: [
         {
           id: 11,

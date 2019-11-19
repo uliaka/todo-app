@@ -8,7 +8,9 @@ describe('AddTodoItem', () => {
     onAdd: jest.fn(),
   }
   test('should invoke onAdd callback', () => {
-    const { getByText } = render(<AddTodoItem {...props} />)
+    const { getByText, getByPlaceholderText } = render(<AddTodoItem {...props} />)
+    const inputNode = getByPlaceholderText('Type name here...');
+    fireEvent.change(inputNode, { target: { value: 'new value' } });
     fireEvent.click(getByText('Add new'))
     expect(props.onAdd.mock.calls.length).toBe(1)
   })

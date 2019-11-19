@@ -6,7 +6,6 @@ const initialState = {
     {
     id: 1,
     title: 'item one',
-    commentsCount: 2,
     comments: [
       {
         id: 11,
@@ -46,7 +45,8 @@ const initialState = {
       }
     ]
   },
-]
+],
+activeItem: null,
 };
 
 const store = createStore(rootReducer, initialState);

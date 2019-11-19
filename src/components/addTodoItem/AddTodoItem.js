@@ -7,7 +7,7 @@ const AddTodoItem = (props) => {
   const onAdd = (event) => {
     event.preventDefault()
     if (text) {
-      props.onAdd({ title: text, id: 8 });
+      props.onAdd({ title: text });
       setText('')
     }
   }

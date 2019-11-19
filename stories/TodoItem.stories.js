@@ -9,7 +9,7 @@ export default {
 
 const props = {
   title: 'item one',
-  commentsCount: 56,
+  comments: ['coment 1', 'comment 2'],
   onDelete: () => { 
     return action('deleted')
   },

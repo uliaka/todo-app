@@ -32,6 +32,12 @@ const todoReducer = (state = initialState, action) => {
         })
       };
     }
+    case Types.ACTIVE_ITEM: {
+      return {
+        ...state,
+        activeItem: action.payload
+      }
+    }
     default:
       return state;
   }
