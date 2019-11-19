@@ -14,6 +14,7 @@ function ItemDetailsPage(props) {
 
   const dispatch = useDispatch();
   const addComment = (comment) => dispatch({ type: types.ADD_COMMENT, payload: comment })
+  const randomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
   return (
     <div className="comments-list" style={{ display: 'flex', justifyContent: 'center' }}>
@@ -26,6 +27,7 @@ function ItemDetailsPage(props) {
               <Comment
                 {...comment}
                 key={comment.id}
+                color={randomColor()}
               />
             )}
             <AddComment addComment={addComment} itemId={itemId} />

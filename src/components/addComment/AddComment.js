@@ -15,7 +15,6 @@ const AddComment = (props) => {
       }
     }
   }
-
   return (
     <form className='add-comment-container'>
       <div className='avatar'>
