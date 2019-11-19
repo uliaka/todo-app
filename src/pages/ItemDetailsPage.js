@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import './ItemDetailsPage.scss';
 import Card from '../components/card/Card.js';
 import Comment from '../components/comment/Comment.js';
 import AddComment from '../components/addComment/AddComment.js';
@@ -16,7 +17,7 @@ function ItemDetailsPage(props) {
 
   return (
     <div className="comments-list" style={{ display: 'flex', justifyContent: 'center' }}>
-      <div onClick={goBack}>go back</div>
+      <div onClick={goBack} className='go-back-arrow'><span>&#8592;</span></div>
       <Card
         title={'Comments'}
         body={

@@ -4,7 +4,7 @@ import './AddComment.scss';
 const AddComment = (props) => {
   const textArea = useRef(null)
   const addComment = (event) => {
-    if ((event.keyCode == 10 || event.keyCode === 13) && event.ctrlKey) {
+    if ((event.keyCode === 10 || event.keyCode === 13) && event.ctrlKey) {
       const { value } = textArea.current;
       if (value) {
         props.addComment({

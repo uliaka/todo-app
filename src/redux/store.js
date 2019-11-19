@@ -13,7 +13,7 @@ const initialState = {
         text: "text 1",
       },
       {
-        id: 11,
+        id: 13,
         text: "text 2",
       }
     ]
@@ -21,12 +21,30 @@ const initialState = {
   {
     id: 2,
     title: 'item two',
-    commentsCount: 2,
+    comments: [
+      {
+        id: 1,
+        text: "text 15",
+      },
+      {
+        id: 17,
+        text: "text 25",
+      }
+    ]
   },
   {
     id: 3,
     title: 'item two',
-    commentsCount: 123,
+    comments: [
+      {
+        id: 132,
+        text: "text 15",
+      },
+      {
+        id: 5,
+        text: "text 25",
+      }
+    ]
   },
 ]
 };
