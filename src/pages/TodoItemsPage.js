@@ -5,6 +5,7 @@ import AddTodoItem from '../components/addTodoItem/AddTodoItem.js';
 import { useSelector, useDispatch } from 'react-redux';
 import Types from '../redux/types.js';
 import ItemsDetails from './ItemDetailsPage.js'
+import { background } from '@storybook/theming';
 
 const TodoItems = () => {
   const dispatch = useDispatch();
@@ -14,9 +15,23 @@ const TodoItems = () => {
   const onDelete = (item) => dispatch({ type: Types.DELETE_ITEM, payload: item });
   const onAdd = (item) => dispatch({ type: Types.ADD_ITEM, payload: item });
 
+  const containerStyles = {
+    display: 'flex',
+  }
+
+  const sideBar = {
+    width: '10%',
+    height: '800px',
+    backgroundColor: '#2C2F3E',
+    zIndex: 100,
+    display: 'block'
+  }
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around'}}>
+    <div className="container" style={containerStyles}>
+      <div style={sideBar}></div>
       <Card
+        first
         title={'Items'}
         body={
           <div>

@@ -10,7 +10,6 @@
   cursor: pointer;
 
   .title-block {
-
     .title {
       display: inline;
       font-weight: bold;
@@ -41,4 +40,20 @@
 
 .active {
   border-left: 3px solid #DB5A76;
+}
+
+
+@media screen and (max-width: 320px) {
+  .item-conteiner {
+    padding: 0 0 5px 3px;
+  }
+  .title-block {
+    flex-direction: column;
+    display: flex;
+    height: 40px;
+  }
+  .commetns-count {
+    margin-left: 0px;
+  }
+
 }

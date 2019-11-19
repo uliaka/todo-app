@@ -3,7 +3,7 @@ import './Card.scss';
 import PropTypes from 'prop-types';
 
 const Card = (props) => (
-  <div className='card-container'>
+  <div className={`card-container ${props.first ? 'first-card' : ''}`}>
     <div className='card-title'>
         {props.title}
     </div>
