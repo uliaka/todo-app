@@ -1,24 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap');
+
 .card-container {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+  box-shadow: 0px 0px 6px 3px rgba(219,219,219,1);
   text-align: left;
   padding: 20px;
-  margin: 10px;
+  margin: 20px;
   height: 500px;
   overflow-x: hidden;
   overflow-y: auto;
   flex: 2;
+
   .card-title {
     font-size: 50px;
     color:#50525E;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .card-body {
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
 @media screen and (max-width: 590px) {
   .card-container {
+    box-shadow: 0px 0px 2px 2px rgba(219,219,219,1);
     padding: 0;
-    margin: 0;
+    margin: 3px;
+    font-size: 12px;
   }
   .first-card {
     flex: 1;
@@ -26,9 +34,16 @@
   }
   .item-conteiner {
     height: 70px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .card-title {
     font-size: 25px !important;
+  }
+  .avatar {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 5px !important;
   }
 }
 

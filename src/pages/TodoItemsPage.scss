@@ -4,8 +4,9 @@
 
 
   .side-bar {
-    width: 10%;
+    width: 12%;
     background-color: #2C2F3E;
+    padding: 5px;
     
     h2 {
       text-transform: uppercase;
@@ -19,4 +20,10 @@
      margin-top: 5px;
     }
   }
+}
+@media screen and (max-width: 590px) {
+  .side-bar {
+    display: none;
+  }
+
 }

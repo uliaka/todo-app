@@ -15,15 +15,6 @@ const TodoItems = () => {
   const onDelete = (item) => dispatch({ type: Types.DELETE_ITEM, payload: item });
   const onAdd = (item) => dispatch({ type: Types.ADD_ITEM, payload: item });
 
-  const sideBar = {
-    width: '10%',
-    height: '800px',
-    backgroundColor: '#2C2F3E',
-    zIndex: 100,
-    display: 'block',
-    color: 'white'
-  }
-
   return (
     <div className='container'>
       <div className='side-bar'>

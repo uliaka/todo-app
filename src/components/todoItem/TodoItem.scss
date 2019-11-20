@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 .item-conteiner {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,9 +47,10 @@
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
   .item-conteiner {
     padding: 0 0 5px 3px;
+    text-align: center;
   }
   .title-block {
     flex-direction: column;
@@ -54,7 +58,8 @@
     height: 40px;
   }
   .commetns-count {
-    margin-left: 0px;
+    margin: 0px;
+    display: block;
   }
 
 }
