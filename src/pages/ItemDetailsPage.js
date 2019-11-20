@@ -10,11 +10,7 @@ const ItemDetailsPage = () => {
   const item = useSelector(state => state.items && state.items.find(i => i.id === itemId)) || {};
   const comments = item.comments || [];
   const dispatch = useDispatch();
-  const addComment = (comment) => { 
-    dispatch({ type: types.ADD_COMMENT, payload: comment })
-    
-  }
-  
+  const addComment = (comment) =>  dispatch({ type: types.ADD_COMMENT, payload: comment })
   const randomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   
   const bottomRef = useRef()

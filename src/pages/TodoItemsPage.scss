@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  text-align: center;
+
+
+  .side-bar {
+    width: 10%;
+    background-color: #2C2F3E;
+    
+    h2 {
+      text-transform: uppercase;
+      color: white;
+      font-weight: normal;
+      margin-bottom: 3px;
+    }
+
+    p {
+     color: #50545F;
+     margin-top: 5px;
+    }
+  }
+}

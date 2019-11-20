@@ -4,8 +4,8 @@ import TodoItem from '../components/todoItem/TodoItem.js';
 import AddTodoItem from '../components/addTodoItem/AddTodoItem.js';
 import { useSelector, useDispatch } from 'react-redux';
 import Types from '../redux/types.js';
-import ItemsDetails from './ItemDetailsPage.js'
-import { background } from '@storybook/theming';
+import ItemsDetails from './ItemDetailsPage.js';
+import './TodoItemsPage.scss';
 
 const TodoItems = () => {
   const dispatch = useDispatch();
@@ -15,21 +15,21 @@ const TodoItems = () => {
   const onDelete = (item) => dispatch({ type: Types.DELETE_ITEM, payload: item });
   const onAdd = (item) => dispatch({ type: Types.ADD_ITEM, payload: item });
 
-  const containerStyles = {
-    display: 'flex',
-  }
-
   const sideBar = {
     width: '10%',
     height: '800px',
     backgroundColor: '#2C2F3E',
     zIndex: 100,
-    display: 'block'
+    display: 'block',
+    color: 'white'
   }
 
   return (
-    <div className="container" style={containerStyles}>
-      <div style={sideBar}></div>
+    <div className='container'>
+      <div className='side-bar'>
+        <h2>dairy app</h2>
+        <p>Comment with no sense</p>
+      </div>
       <Card
         first
         title={'Items'}
@@ -50,8 +50,8 @@ const TodoItems = () => {
           </div>
         }
       />
-      { activeItem &&
-      <ItemsDetails />
+      {activeItem &&
+        <ItemsDetails />
       }
     </div>
   );

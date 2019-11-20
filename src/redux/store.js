@@ -1,47 +1,30 @@
 import { createStore } from 'redux';
 import rootReducer from './reducer.js';
+import localStorage from './../localStorage.js';
 
 const initialState = {
   items: [
     {
     id: 1,
-    title: 'item one',
+    title: 'First item',
     comments: [
       {
-        id: 11,
-        text: "text 1",
+        text: "comment one",
       },
       {
-        id: 13,
-        text: "text 2",
+        text: "comment two",
       }
     ]
   },
   {
     id: 2,
-    title: 'item two',
+    title: 'Second item',
     comments: [
       {
-        id: 1,
-        text: "text 15",
+        text: "comment one",
       },
       {
-        id: 17,
-        text: "text 25",
-      }
-    ]
-  },
-  {
-    id: 3,
-    title: 'item two',
-    comments: [
-      {
-        id: 132,
-        text: "text 15",
-      },
-      {
-        id: 5,
-        text: "text 25",
+        text: "comment two",
       }
     ]
   },
@@ -49,6 +32,17 @@ const initialState = {
 activeItem: null,
 };
 
-const store = createStore(rootReducer, initialState);
+const persistedState = localStorage.loadState() ? localStorage.loadState() : initialState;
+const store = createStore(
+  rootReducer,
+  persistedState
+);
+store.subscribe(() => {
+  localStorage.saveState({
+    items: store.getState().items,
+    activeItem: store.getState().activeItem
+  });
+});
 
 export default store;
+
